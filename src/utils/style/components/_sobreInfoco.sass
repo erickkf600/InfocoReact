@@ -1,0 +1,118 @@
+.cabecalho
+  @extend %p-relative
+  text-align: center
+  width: 100%
+  padding: 3rem 0 20px 0
+  h1
+    color: #3a3a3a
+    margin-bottom: 0
+    padding-bottom: 18px
+    font:
+      size: 41px
+      weight: bold
+  span
+    @extend %color-laranja         
+  p
+    max-width: 100%
+    color: #686868
+    margin: 0 auto
+    padding-bottom: 30px
+    @extend %spacing
+    font:
+      size: 18px
+      weight: 400
+    @include respond-to('medium')
+        max-width: 85%  
+.itens-infoco
+    text-align: center 
+    i
+        border-radius: 100% 
+        border: 1px solid $laranja-dark
+        font-size: 35px
+        height: 117px
+        line-height: 117px
+        text-align: center
+        width: 117px
+        @extend %color-laranja
+        @extend %t-3s
+    h2
+        color: #525252
+        text-transform: uppercase
+        font-size: 16px
+        border-bottom: 1px solid #adadad
+        margin-top: 32px
+        padding-bottom: 17px   
+        @include respond-to('extra-large')     
+            font-size: 18px    
+    p
+        color: #7d7d7d
+        font-size: 15.5px
+        padding: 12px 
+    li
+        &:hover
+            i
+                @extend %back-laranja
+                @extend %color-branco
+            h2
+                border-bottom: 2px solid $laranja-dark 
+                padding-bottom: 16px                
+.video-setor
+    margin: 3rem auto 4rem auto 
+    @include respond-to('extra-large')
+        margin-right: 50px
+    h2
+        color: #3a3a3a
+        margin-bottom: 0
+        padding-bottom: 18px
+        font:
+            size: 30px
+            weight: 400    
+        @include respond-to('small')
+            font-size: 43px 
+    span
+        @extend %color-laranja  
+    .texto-video
+        padding-left: 85px
+        padding-left: 10px                
+        @include respond-to('small')
+            padding-top: 10px 
+        p
+            text-align: justify
+            color: #535353
+            margin-bottom: 32px
+            font:
+                size: 19px
+                weight: 400 
+            @include respond-to('extra-large')
+                max-width: 80%
+        a
+            @extend %botao     
+.video
+    border: 2px ridge $laranja-dark  
+
+.contador
+    text-align: center 
+    .card
+        height: 190px 
+        background: rgba(255, 135, 28, .8)
+        border: dashed 3px $laranja-dark 
+        margin-bottom: 30px
+        @include respond-to('small')
+            height: 160px 
+    .titulo
+        margin-top: 50px 
+        font-size: 40px 
+    .card-body
+        padding: 0
+    i
+        margin: 15px 0 10px 0  
+        color: #fff
+        font-size: 50px
+    h2
+        margin-bottom: 0
+    p
+        color: #fff
+        @extend %spacing
+        font:
+            size: 19px
+            weight: 600         

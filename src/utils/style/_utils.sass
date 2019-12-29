@@ -1,0 +1,63 @@
+//VARIABLES
+$black: #000
+$dark-grey: #23282D
+$laranja-light: #FF9F49
+$laranja-dark: #FF871C
+$gradient-laranja: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%)
+
+//EXTENDS
+%f-left
+  float: left
+%d-inline
+  display: inline 
+%d-flex
+  display: flex  
+%d-inline-block  
+  display: inline-block 
+%f-left
+  float: left  
+%p-relative
+  position: relative 
+%p-absolute
+  position: absolute
+%p-fixed
+  position: fixed  
+%back-transparent
+  background: transparent
+%color-branco
+  color: #fff
+%color-laranja
+  color: #FF871C  
+%gradient-laranja
+  background-color: #ff4e00
+  background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%)
+  opacity: .97 
+
+%back-laranja 
+  background: #FF871C
+%back-branco 
+  background: #fff 
+%font
+  font-family: 'Yantramanav', sans-serif  
+%font2
+  font-family: 'Poppins',Arial, sans-serif    
+%spacing
+  letter-spacing: 1.2px  
+%t-3s
+  -moz-transition: .3s  
+  -o-transition: .3s
+  -webkit-transition: .3s
+  -ms-transition: .3s
+  transition: .3s     
+%botao
+  border: 2px solid $laranja-dark
+  padding: 10px 50px 10px 50px
+  @extend %spacing
+  @extend %color-laranja
+  @extend %font
+  font:
+    size: 18px
+    weight: bold 
+  &:hover
+    @extend %color-branco
+    @extend %back-laranja  

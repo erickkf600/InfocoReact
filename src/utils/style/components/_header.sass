@@ -1,0 +1,85 @@
+.header
+    border-top: 5px solid $laranja-dark
+.logo
+    img
+        objetive-fit: contain
+        width: 230px
+.infoco-navbar-light
+    @extend %p-relative
+    background: transparent !important
+    z-index: 3
+    padding: 0
+    align-items: center
+    .navbar-nav
+        display: flex
+        flex-flow: column
+        justify-content: center
+        text-align: center
+        @include respond-to('medium')
+            flex-flow: row
+        li
+            margin: 2rem 20px
+            a
+                font-size: 15px
+                color: $dark-grey
+                letter-spacing: 1px
+                text-transform: uppercase
+                @include transition(.5s)
+                line-height: 1.8
+                font-weight: 400
+                @extend %font2
+                &:after
+                    content: ''
+                    display: block
+                    width: 0
+                    height: 3px 
+                    @extend %back-laranja
+                    @include transition(.5s)
+                &:hover
+                    text-decoration: none
+                    &:after
+                        width: 100% 
+                &.active
+                    &:after
+                        width: 100%       
+.pesq-icon  
+    @extend %p-absolute
+    right: 27px
+    cursor: pointer
+    border: none  
+    @extend %back-laranja
+    @extend %color-branco  
+    margin: 0 30px 0 55px  
+    height: 35px
+    padding: 5px 20px 15px 20px
+    @include transition(.5s)
+    @include back(url("https://infocomn.com.br/assets/img/search-icon.png"))   
+    &:focus
+        box-shadow: none           
+.search-area
+    @extend %p-absolute
+    right: 266px
+    top: 33px
+    width: 0 
+    z-index: 999 
+    opacity: 0
+    @include transition (all .7s) 
+    #pesquisar
+        width: 100%
+        //height: 45px 
+        border-bottom: solid 2px $laranja-dark
+        border-top: none
+        border-right: none
+        border-left: none  
+        @extend %back-transparent   
+    @include placeholder 
+        color: #aaa
+        font:
+            size: 20px
+            weight: 600    
+.exibir
+    width: 266px !important
+    opacity: 1 !important
+    right: 100px
+              
+     
