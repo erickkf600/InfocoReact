@@ -8,6 +8,7 @@ class Header extends React.Component {
       hideInput: false,
       menu: [],
       selectedItem: String,
+      headerTop: true,
     };
   }
   componentDidMount = () =>{
@@ -20,6 +21,7 @@ class Header extends React.Component {
       { name: 'faq', title: 'Pagina faq infoco', url: 'faq' },
     ]})
     this.checkParam()
+    window.onscroll = () => this.header()
   }
   checkParam = () =>{
     let rota = window.location.pathname
@@ -48,6 +50,13 @@ class Header extends React.Component {
 
       default:
         break;
+    }
+  }
+  header = ()=>{
+    if (document.documentElement.scrollTop > 250) {
+      this.setState({ headerTop: false })
+    } else if (document.documentElement.scrollTop === 0){
+      this.setState({ headerTop: true })
     }
   }
   showSearch = (e) => {

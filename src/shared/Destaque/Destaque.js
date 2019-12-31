@@ -6,5 +6,4 @@ class Destaque extends React.Component {
     return template.call(this);
   }
 }
-
 export default Destaque;

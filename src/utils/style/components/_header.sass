@@ -3,19 +3,36 @@
 .logo
     img
         objetive-fit: contain
-        width: 230px
+        width: 200px
+        @include respond-to('medium')
+            width: 230px
 .infoco-navbar-light
-    @extend %p-relative
-    background: transparent !important
+    @include transition(all .6s)
+    @extend %p-fixed
+    width: 100%
+    background: rgba(255,255,255,1 ) !important
     z-index: 3
     padding: 0
     align-items: center
+    display: flex
+    flex-flow: row
+    justify-content: space-between
+    align-items: center
+    height: 65px
+    @include respond-to('medium')
+        height: 95px    
+    .menu
+        background: $laranja-dark
+        color: #fff
+        margin-left: 10px
     .navbar-nav
-        display: flex
-        flex-flow: column
+        display: none
         justify-content: center
         text-align: center
+        opacity: 1
+        @include transition(.5s)
         @include respond-to('medium')
+            display: flex
             flex-flow: row
         li
             margin: 2rem 20px
@@ -41,21 +58,28 @@
                         width: 100% 
                 &.active
                     &:after
-                        width: 100%       
+                        width: 100%  
+.headerFixed
+    @include transition(all .6s)                 
+    background: rgba(255,255,255,.8 ) !important      
+    height: 70px  
 .pesq-icon  
     @extend %p-absolute
-    right: 27px
+    right: 10px
     cursor: pointer
     border: none  
     @extend %back-laranja
     @extend %color-branco  
-    margin: 0 30px 0 55px  
+    margin: 00
     height: 35px
     padding: 5px 20px 15px 20px
     @include transition(.5s)
     @include back(url("https://infocomn.com.br/assets/img/search-icon.png"))   
     &:focus
-        box-shadow: none           
+        box-shadow: none    
+    @include respond-to('medium')
+        right: 27px
+        margin: 0 30px 0 55px             
 .search-area
     @extend %p-absolute
     right: 266px
@@ -78,8 +102,22 @@
             size: 20px
             weight: 600    
 .exibir
-    width: 266px !important
+    width: 53% !important
     opacity: 1 !important
-    right: 100px
-              
+    right: 55px
+    top: 22px
+    @include respond-to('medium')
+        right: 100px    
+        top: auto     
+//ESCONDE MENU AO ABRIR O INPUT DE PESQUISA
+.hideMenu
+    @include transition(.5s)
+    opacity: 0 !important
+.hideLogo
+    @include transition(.5s)
+    opacity: 0 !important
+    @include respond-to('medium')
+        opacity: 1 !important
+
+
      

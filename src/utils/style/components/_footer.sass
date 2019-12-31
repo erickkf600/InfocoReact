@@ -1,0 +1,56 @@
+#img-footer
+    padding-top: 20px
+    display: block
+    margin: 0 auto
+#footer
+    background-color: #242424
+    margin-top: -6px
+    width: 100%   
+.quick-links
+    display: flex
+    justify-content: center  
+    li
+        margin: 20px 20px
+        a
+            color: #fff 
+            @extend %font2
+            text-transform: uppercase
+            &:hover
+                color: #ccc   
+.sociais
+    display: flex
+    justify-content: center
+    padding-top: 20px
+    i
+        color: #888d90
+        margin: 13px
+        font-size: 2rem
+        transition: .3s
+        &:hover
+            @extend %color-laranja
+.sub-footer
+    padding: 14px 0px
+    @extend %back-transparent
+    @extend %d-flex
+    align-items: center
+    color: #888d90
+    line-height: 1
+    font:
+        size: 17px
+        weight: 600
+    a
+        color: #5a5b5b
+    .text-footer
+        align-content: center
+        @extend %d-flex
+        justify-content: center
+        align-items: center
+        margin: 0 auto
+        p
+            max-width: 70%
+            text-align: center
+            line-height: 25px
+            margin-left: 127px
+    .imgsFooter
+        @extend %d-flex
+        justify-content: flex-end        

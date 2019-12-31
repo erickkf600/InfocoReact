@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import Slides from '../shared/Slides/container';
-import Sobre from '../shared/Sobre/container';
-import Destaque from '../shared/Destaque/container';
-import PremiumSection from '../shared/PremiumSection/container';
+import Slides from '../shared/Slides/Slides';
+import Sobre from '../shared/Sobre/Sobre';
+import Destaque from '../shared/Destaque/Destaque';
+import PremiumSection from '../shared/PremiumSection/PremiumSection';
+import Footer from '../shared/Footer/Footer';
 class Home extends Component {
     render() {
         return (
@@ -11,6 +12,7 @@ class Home extends Component {
                 <Sobre />  
                 <Destaque />  
                 <PremiumSection />  
+                <Footer />  
             </>
         );
     }

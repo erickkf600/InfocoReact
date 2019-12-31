@@ -14,10 +14,10 @@ function template() {
     }
   }
   return (
-    <div>
+    <>
       <Swiper {...params} className="slides">
         { banners.map(banner => 
-          <Parallax key={banner.name} strength={200} blur={{ min: -15, max: 15 }}>
+          <Parallax key={banner.name} strength={200} blur={{ min: -15, max: 15 }} className="bannerWraper">
             <div>Use the background component for custom elements</div>
             <Background className="banner">
               <img src={banner.url} alt="fill murray" />
@@ -25,7 +25,7 @@ function template() {
           </Parallax>
       )}
       </Swiper>
-    </div>
+    </>
   );
 };
 
